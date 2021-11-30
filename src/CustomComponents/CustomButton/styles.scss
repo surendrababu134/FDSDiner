@@ -1,0 +1,15 @@
+@import "../../sass/var/global.scss";
+.primaryBtn {
+    background-color: $PRIMARY_COLOR !important;
+    color: $PRIMARY_TEXT_COLOR !important;
+}
+
+.secondaryBtn {
+    background-color: $SECONDARY_COLOR !important;
+    color: $SECONDARY_TEXT_COLOR !important;
+}
+
+.errorBtn {
+    background-color: $ERROR_COLOR !important;
+    color: $PRIMARY_TEXT_COLOR !important;
+}

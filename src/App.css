@@ -1,38 +1,223 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.bodyCSS {
+    height: 95vh;
+    overflow-y: scroll;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    height: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    background-color: #8fa5f7;
+    color: #fff;
+}
+
+.active {
+    background-color: #8fa5f7;
+    color: #fff;
+}
+
+.bodyContainer {
+    width: 60% !important;
+    position: absolute;
+    left: 20%;
+}
+
+.bodyItemContainer {
+    width: 60% !important;
+    position: absolute;
+    left: 5%;
+    display: inline-block;
+}
+
+.contentTop {
+    margin-top: 2%;
+    border: 1px solid grey;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.imageDesign {
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 120px;
+}
+
+.restName {
+    color: #000000 !important;
+    font-size: 1.8em !important;
+    padding-left: 2%;
+}
+
+.starRating {
+    color: brown;
+}
+
+.starPadding {
+    padding-left: 2%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.inlineDiv {
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    padding: 1%;
+    margin-left: 1%;
+    border-radius: 6px;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.menuName {
+    text-transform: capitalize;
+    background-color: #dedede;
+    border: 1px solid #dedede;
+    margin: 3% 3% 0% 3%;
+    padding: 2%;
+    font-weight: bold;
+    font-size: 1.3em;
+    letter-spacing: 0.07em;
+    border-radius: 10px;
+}
+
+.itemNames {
+    margin: 1% 3% 0% 3%;
+    border: 1px solid #dedede;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.floatVal {
+    float: right;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.marginleft {
+    margin-left: -5%;
+}
+
+.buttonDesign {
+    border: 1px solid #000000;
+    padding: 1%;
+    width: 70%;
+}
+
+.floatLeftItemCount {
+    text-align: center;
+    width: 30%;
+    border-right: 1px solid black;
+    cursor: pointer;
+}
+
+.floatRightItemCount {
+    float: right;
+    text-align: center;
+    width: 30%;
+    border-left: 1px solid black;
+    cursor: pointer;
+}
+
+.alignInCenter {
+    text-align: center;
+    width: 35%;
+}
+
+.divItemReview {
+    margin: 2% 2% 0% 2%;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    padding: 3%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 25%;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.marginTop {
+    margin-top: 3% !important;
+}
+
+.checkDivItem {
+    padding: 2%;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 2%;
+}
+
+.orderValueTotal {
+    float: right;
+}
+
+.marginDiv {
+    margin-top: 8%;
 }
