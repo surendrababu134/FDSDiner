@@ -211,6 +211,10 @@ ul li a:hover {
     width: 100%;
 }
 
+.width-90 {
+    width: 90%;
+}
+
 .marginTop {
     margin-top: 3% !important;
 }
@@ -245,4 +249,19 @@ ul li a:hover {
 
 .colorRed {
     color: red;
+}
+
+.signupSignIn {
+    border: 1px solid #dedede;
+    border-radius: 10px;
+}
+
+.alignMentCenter {
+    text-align: center;
+}
+
+.divField {
+    padding: 2% 0% 2% 2%;
+    width: 95%;
+    text-align: center;
 }

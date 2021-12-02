@@ -64,7 +64,7 @@ const Header = ()=> {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-  console.log(cookies.get("login"));
+  const loginType = cookies.get("login");
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -86,19 +86,13 @@ const Header = ()=> {
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
+    id="basic-menu"
+    anchorEl={anchorEl}
+    open={isMenuOpen}
+    onClose={handleMenuClose}
+    MenuListProps={{
+      'aria-labelledby': 'basic-button',
+    }}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
@@ -206,26 +200,28 @@ const Header = ()=> {
             
             <ul>
                 <li><NavLink exact activeclassname="active" to='/' >Restuarants</NavLink></li>
-                <li><NavLink activeclassname="active" to='/saved'>Saved Orders</NavLink></li>
+                {loginType==="true"?"":<li><NavLink exact activeclassname="active" to='/signup' >Sign Up</NavLink></li>}
+                {loginType==="true"?"":<li><NavLink exact activeclassname="active" to='/signin' >Sign In</NavLink></li>}
+                {/* <li><NavLink activeclassname="active" to='/saved'>Saved Orders</NavLink></li> */}
                 {/* <li><NavLink activeClassName="active" to='/service/inner'>Service</NavLink></li> */}
             </ul> 
                 {/* <Link to="/">Restuarants</Link>
                 <Link to="/saved">Saved Orders</Link> */}
                 
             
-            <IconButton
+            {loginType==="true"?<IconButton
               size="large"
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
-            //   onClick={handleProfileMenuOpen}
+              onClick={handleProfileMenuOpen}
               color="inherit"
             >
               <AccountCircle />
-            </IconButton>
+            </IconButton>:""}
           </Box>
-          <Box sx={{ display: { xs: 'flex'} }}>
+          {/* <Box sx={{ display: { xs: 'flex'} }}>
             <IconButton
               size="large"
               aria-label="show more"
@@ -236,7 +232,7 @@ const Header = ()=> {
             >
               <MoreIcon />
             </IconButton>
-          </Box>
+          </Box> */}
         </Toolbar>
       </AppBar>
       {/* {renderMobileMenu} */}

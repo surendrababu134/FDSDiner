@@ -1,8 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Grid } from "@mui/material";
 import StarRateIcon from '@mui/icons-material/StarRate';
+import { useNavigate } from "react-router-dom";
+import { cookies } from "../../../utils/utils";
 
 const OrdersPage = () => {
+    const history = useNavigate();
+
+    useEffect(()=>{
+        if(cookies.get("login") !== "true"){
+            history('/');
+          }
+    },[])
+      
   const [orderDetails, setOrderDetails] = useState({
     orderId: 1,
     orderItems: [
