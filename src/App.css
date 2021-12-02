@@ -92,6 +92,13 @@ ul li a:hover {
     height: 120px;
 }
 
+.imageDesignOrder {
+    border-radius: 10px;
+    border: 1px solid #dedede;
+    background-color: #dedede;
+    height: 20px;
+}
+
 .restName {
     color: #000000 !important;
     font-size: 1.8em !important;
@@ -220,4 +227,22 @@ ul li a:hover {
 
 .marginDiv {
     margin-top: 8%;
+}
+
+.greyBg {
+    background-color: #dedede;
+}
+
+.gridItemLevel {
+    border-radius: 10px;
+    border: 1px solid #dedede;
+    padding: 2%;
+}
+
+.fontsizeOrder {
+    font-size: 1.2em;
+}
+
+.colorRed {
+    color: red;
 }

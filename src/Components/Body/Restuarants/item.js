@@ -5,11 +5,13 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const ItemsPage = () => {
     const [checkOutObj,setCheckOutObj] = useState({});
     const [tableNo,setTableNo] = useState("");
-    let orderValue = {}
+    let orderValue = {};
+    const history = useNavigate();
   const [items, setItems] = useState({
     menuBar: ["snacks", "mainCourse", "deserts"],
     snacks: [
@@ -141,7 +143,7 @@ const ItemsPage = () => {
         toast.error("Please take the order.")
       }else{
         if(tableNo){
-            
+            history('/order/1');
         }else{
             toast.error("Please enter table number.")
         }
